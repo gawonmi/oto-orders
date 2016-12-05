@@ -5,7 +5,7 @@ steps:
     description: Builds my service
     image_name: gawonmi/otoorders
     tag: ${{CF_SHORT_REVISION}}
-  push-the-image:
+  push-the-image: # needs to be pushed twice in order to tag with git version as well as with branch name
     type: push
     candidate: ${{build-the-image}}
     tag: ${{CF_SHORT_REVISION}}
